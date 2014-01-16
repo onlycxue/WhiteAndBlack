@@ -1,9 +1,13 @@
 #ifndef _GAMESCENE_H_
 #define _GAMESCENE_H_
 
+
 #include "cocos2d.h"
 #include "SelectWindow.h"
 #include "ChessBoardLayer.h"
+#include "StoreLayer.h"
+
+
 class GameScene : public cocos2d::CCLayer
 {
 
@@ -15,5 +19,6 @@ public:
 private:
     static	cocos2d::CCScene* m_parentScene;
 };
+
 
 #endif

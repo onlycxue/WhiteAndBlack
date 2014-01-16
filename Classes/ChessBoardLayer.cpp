@@ -30,7 +30,15 @@ bool ChessBoardLayer::init()
 	CCSize visible = CCDirector::sharedDirector()->getVisibleSize();
 	CCSprite *pSprite = CCSprite::create("gameBackGroud.png");
 	pSprite->setPosition(ccp(visible.width/2,visible.height/2));
-	this->addChild(pSprite);
+	addChild(pSprite);
+
+	m_whiteStatus = WhiteStoreLayer::create(); 
+	addChild(m_whiteStatus);
+
+	m_blackStatus = BlackStoreLayer::create();
+	addChild(m_blackStatus);
+
+
 	setTouchEnabled(true);
 	return true;
 

@@ -26,10 +26,17 @@ cocos2d::CCScene* GameScene::scene()
 	
 	GameScene *layer = GameScene::create();
 	scene->addChild(layer,1);
-	m_parentScene=scene;
+//	m_parentScene=scene;
 	//scene->addChild(GameScene::create());
 	ChessBoardLayer* chessLayer = ChessBoardLayer::create();
 	scene->addChild(chessLayer,0);
+
+//	WhiteStoreLayer* whiteStatus = WhiteStoreLayer::create(); 
+//	scene->addChild(whiteStatus);
+
+//	BlackStoreLayer* blackStatus = BlackStoreLayer::create();
+//	scene->addChild(blackStatus);
+
 	return scene;
 }
 

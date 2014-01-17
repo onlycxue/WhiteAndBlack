@@ -9,7 +9,7 @@ class StoreLayer : public cocos2d::CCLayer
 {
 public:
 	virtual bool init();
-	virtual void update(float dt);
+//	virtual void update(float dt);
 	virtual void onExit();
 	CC_SYNTHESIZE(CCSprite*,_Role,Role);
 	CC_SYNTHESIZE(int,_store,Store);

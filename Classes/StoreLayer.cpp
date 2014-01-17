@@ -35,7 +35,7 @@ bool StoreLayer::init()
 	addChild(m_time);
 
 	//addChild(getRole());
-	this->scheduleUpdate();	
+//	this->scheduleUpdate();	
 
 	return true;
 
@@ -66,12 +66,12 @@ void StoreLayer::onExit()
 
 }
 
-void StoreLayer::update(float dt)
+/*void StoreLayer::update(float dt)
 {
 	updateStore();
 	updateTime();
 
-}
+}*/
 
 //***********WhiteStoreLayer******************//
 

@@ -7,7 +7,8 @@ SOURCES = main.cpp \
         ../Classes/HelloWorldScene.cpp \
 		../Classes/GameScene.cpp \
 		../Classes/SelectWindow.cpp \
-		../Classes/ChessBoardLayer.cpp
+		../Classes/ChessBoardLayer.cpp \
+		../Classes/StoreLayer.cpp 
 
 COCOS_ROOT = ../../..
 include $(COCOS_ROOT)/cocos2dx/proj.linux/cocos2dx.mk

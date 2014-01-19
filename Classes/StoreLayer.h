@@ -22,6 +22,7 @@ public:
 	virtual void updateTime();
 	CREATE_FUNC(StoreLayer);
 
+
 };
 
 class WhiteStoreLayer : public StoreLayer

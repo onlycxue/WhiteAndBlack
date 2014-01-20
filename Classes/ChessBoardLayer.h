@@ -4,6 +4,8 @@
 #include "cocos2d.h"
 #include "StoreLayer.h" 
 #include "define.h"
+#include "ChessPiece.h"
+#include <iostream>
 
 
 USING_NS_CC;
@@ -17,12 +19,6 @@ typedef struct
 class ChessBoardLayer : public cocos2d::CCLayer
 {
 public:
-	enum PieceStatus
-	{
-		EMPTYSTATUS,
-		BLACKSTATUS,
-		WHITESTATUS,
-	};
 
 	virtual bool init();
 	virtual void ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent);
@@ -30,9 +26,12 @@ public:
 	void createPiece(CCPoint point,enum PieceStatus role);
 	ChessCoordinate pixelToChessCoordinate(CCPoint point);
 	void chessBufInit();
-	CCString* makeKey(int x,int y);
+	std::string makeKey(int x,int y);
 	//
 	int judgeRule(int x,int y,void *chess,enum PieceStatus currentRole);
+	void DicAddChild(int x,int y,ChessPiece *piece);	
+	ChessPiece* getPieceFromDic(int x,int y);
+
 	CREATE_FUNC(ChessBoardLayer);	
 private:
 	WhiteStoreLayer* m_whiteStatus;

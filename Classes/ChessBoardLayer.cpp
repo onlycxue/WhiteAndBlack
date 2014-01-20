@@ -39,7 +39,10 @@ bool ChessBoardLayer::init()
 
 	m_blackStatus = BlackStoreLayer::create();
 	addChild(m_blackStatus);
-
+	
+	//dictionary for chesspiece;
+	m_chessPieceDic = CCDictionary::create();
+	
 
 	setTouchEnabled(true);
 	m_whiteStore = 0;
@@ -55,16 +58,16 @@ void ChessBoardLayer::chessBufInit()
 	{
 		for(int j = 0; j < GRIDNUM; j++)	
 		{
-			chessBuf[i][j] = ChessBoardLayer::EMPTYSTATUS;	
+			chessBuf[i][j] = EMPTYSTATUS;	
 		
 		}
 	
 	}
 	
-	chessBuf[3][3] = ChessBoardLayer::WHITESTATUS; 
-	chessBuf[4][4] = ChessBoardLayer::WHITESTATUS;
-	chessBuf[3][4] = ChessBoardLayer::BLACKSTATUS;
-	chessBuf[4][3] = ChessBoardLayer::BLACKSTATUS;
+	chessBuf[3][3] = WHITESTATUS; 
+	chessBuf[4][4] = WHITESTATUS;
+	chessBuf[3][4] = BLACKSTATUS;
+	chessBuf[4][3] = BLACKSTATUS;
 
 }
 
@@ -130,6 +133,18 @@ void ChessBoardLayer::createPiece(CCPoint point,enum PieceStatus role)
 
 }
 
+void ChessBoardLayer::DicAddChild(int x,int y,ChessPiece *piece)
+{
+	m_chessPieceDic->setObject(piece,makeKey(x,y));
+
+}
+
+ChessPiece* ChessBoardLayer::getPieceFromDic(int x,int y)
+{
+	return (ChessPiece*)m_chessPieceDic->objectForKey(makeKey(x,y));
+
+}
+
 int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentRole)
 {
 	if(x < 0 || x >=GRIDNUM || y < 0 || y >=GRIDNUM)
@@ -139,7 +154,7 @@ int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentR
 	//typedef int (*p) [GRIDNUM];
 	//p chessboard = p (chess);
 	
-	if(chessBuf[temp_x][temp_y] != ChessBoardLayer::EMPTYSTATUS)
+	if(chessBuf[temp_x][temp_y] != EMPTYSTATUS)
 		return 0;
 	for(i = 0; i < 8 ; i++)
 	{
@@ -147,14 +162,14 @@ int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentR
 		temp_y += dir[i][1];
 
 		if((temp_x < GRIDNUM && temp_x >=0 && temp_y < GRIDNUM && temp_y >=0)
-		 && (chessBuf[temp_x][temp_y] !=m_currentRole && chessBuf[temp_x][temp_y] != ChessBoardLayer::EMPTYSTATUS))
+		 && (chessBuf[temp_x][temp_y] !=m_currentRole && chessBuf[temp_x][temp_y] != EMPTYSTATUS))
 		 {
 			temp_x += dir[i][0]; 
 			temp_y += dir[i][1];
 
 			while(temp_x < GRIDNUM && temp_x >=0 && temp_y < GRIDNUM && temp_y >=0)
 			{
-				if(chessBuf[temp_x][temp_y] == ChessBoardLayer::EMPTYSTATUS)	
+				if(chessBuf[temp_x][temp_y] == EMPTYSTATUS)	
 					break;
 				if(chessBuf[temp_x][temp_y] == m_currentRole)
 				{
@@ -188,11 +203,11 @@ int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentR
 	return eatNum;
 }
 
-CCString* ChessBoardLayer::makeKey(int x, int y)
+std::string ChessBoardLayer::makeKey(int x, int y)
 {
 	char key[10];
 	sprintf(key,"%d%d",x,y);
-	return CCString::create(key);
+	return key;
 }
 
 void ChessBoardLayer::update(float dt)

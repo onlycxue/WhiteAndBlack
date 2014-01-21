@@ -18,32 +18,23 @@
 
 #include "ChessPiece.h"
 
-ChessPiece* ChessPiece::createWhitePiece()
+ 
+bool ChessPiece::init()
 {
-	animationInit();
+	if(!CCSprite::init())
+	{
+		return false;	
+	}
+	animationInit();	
+	m_pieceRole = EMPTYSTATUS;
 
-	m_piece = ChessPiece::create();
-	CCSpriteFrame *frame = m_frameCache->spriteFrameByName("piece_01.png");	
-	m_piece->setDisplayFrame(frame);
-	m_pieceRole = WHITESTATUS; 
-	return m_piece;
+	return true;
+
 }
-
-ChessPiece* ChessPiece::createBlackPiece()
-{
-	animationInit();
-
-	m_piece = ChessPiece::create();
-	CCSpriteFrame *frame = m_frameCache->spriteFrameByName("piece_02.png");	
-	m_piece->setDisplayFrame(frame);
-	m_pieceRole = BLACKSTATUS;
-
-	return m_piece;
-} 
 void ChessPiece::animationInit()
 {
 	m_frameCache = CCSpriteFrameCache::sharedSpriteFrameCache();
-	m_frameCache->addSpriteFramesWithFile("");
+	m_frameCache->addSpriteFramesWithFile("chesspiece_0.plist");
 	
 //	CCAnimationCache::purgeSharedAnimationCache();
 //	CCAnimationCache *animCache = CCAnimationCache::sharedAnimationCache();
@@ -55,7 +46,7 @@ void ChessPiece::animationInit()
 		sprintf(str,"piece_%02d.png",i);
 		CCSpriteFrame *frame = m_frameCache->spriteFrameByName(str); animFrames->addObject(frame);
 	}
-	CCAnimation *whiteToBlack = CCAnimation::createWithSpriteFrames(animFrames,0.2f);
+	CCAnimation *whiteToBlack = CCAnimation::createWithSpriteFrames(animFrames,2.0f);
 	CCAnimationCache::sharedAnimationCache()->addAnimation(whiteToBlack,"whiteToBlack");
 	animFrames->removeAllObjects();
 	
@@ -66,7 +57,7 @@ void ChessPiece::animationInit()
 		animFrames->addObject(frame);
 	
 	}
-	CCAnimation *blackToWhite = CCAnimation::createWithSpriteFrames(animFrames,0.2f);
+	CCAnimation *blackToWhite = CCAnimation::createWithSpriteFrames(animFrames,2.0f);
 	CCAnimationCache::sharedAnimationCache()->addAnimation(blackToWhite,"blackToWhite");
 	animFrames->removeAllObjects();
 
@@ -86,15 +77,48 @@ void ChessPiece::changeRole(enum PieceStatus role)
 	if(m_pieceRole != role)
 	{
 		if(m_pieceRole == BLACKSTATUS)			
-		{
-			m_piece->runAction(m_WhiteToBlack);	
+		{	//m_WhiteToBlack
+			this->runAction(m_BlackToWhite);	
 		}
 		else if(m_pieceRole == WHITESTATUS)
-		{
-			m_piece->runAction(m_BlackToWhite);	
+		{	//m_BlackToWhite
+			this->runAction(m_WhiteToBlack);
+	
 		}
 	
 	}
 
 }
+
+//whiteChessPiece 
+
+bool WhiteChessPiece::init()
+{
+	if(!ChessPiece::init())
+	{
+		return false;	
+	}
+
+	CCSpriteFrame *frame = m_frameCache->spriteFrameByName("piece_01.png");	
+	this->setDisplayFrame(frame);
+	m_pieceRole = WHITESTATUS; 
+	return true;
+	
+}
+
+//blackChessPiece
+
+bool BlackChessPiece::init()
+{
+	if(!ChessPiece::init())
+	{
+		return false;	
+	}
+	CCSpriteFrame *frame = m_frameCache->spriteFrameByName("piece_02.png");
+	this->setDisplayFrame(frame);
+	m_pieceRole = BLACKSTATUS;
+	return true;
+}
+
+
 

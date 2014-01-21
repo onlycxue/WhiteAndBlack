@@ -24,6 +24,7 @@ public:
 	virtual void ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent);
 	virtual void update(float dt);
 	void createPiece(CCPoint point,enum PieceStatus role);
+	void createPiece(int x,int y,enum PieceStatus role);
 	ChessCoordinate pixelToChessCoordinate(CCPoint point);
 	void chessBufInit();
 	std::string makeKey(int x,int y);
@@ -42,6 +43,7 @@ private:
 	static int dir[8][2];
 	enum PieceStatus m_currentRole;	
 	CCDictionary *m_chessPieceDic;
+	ChessPiece* m_chessPiece;
 };
 
 #endif

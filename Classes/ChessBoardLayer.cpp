@@ -43,7 +43,7 @@ bool ChessBoardLayer::init()
 	//dictionary for chesspiece;
 	m_chessPieceDic = CCDictionary::create();
 	
-
+	chessBufInit();
 	setTouchEnabled(true);
 	m_whiteStore = 0;
 	m_blackStore = 0;
@@ -69,6 +69,13 @@ void ChessBoardLayer::chessBufInit()
 	chessBuf[3][4] = BLACKSTATUS;
 	chessBuf[4][3] = BLACKSTATUS;
 
+	createPiece(3,3,WHITESTATUS);
+	createPiece(4,4,WHITESTATUS);
+	createPiece(3,4,BLACKSTATUS);
+	createPiece(4,3,BLACKSTATUS);
+	getPieceFromDic(4,3)->changeRole(WHITESTATUS);
+
+
 }
 
 void ChessBoardLayer::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
@@ -77,6 +84,12 @@ void ChessBoardLayer::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
 	CCTouch* touch = (CCTouch*)(*it);
 	CCPoint point = touch->getLocation();	
 	CCLog("point:%f,%f",point.x,point.y);
+
+	ChessCoordinate position;
+	position = pixelToChessCoordinate(point);
+
+	judgeRule(position.x,position.y,NULL,WHITESTATUS);
+
 	//createPiece(point,WHITE);	
 }
 
@@ -101,6 +114,38 @@ ChessCoordinate ChessBoardLayer::pixelToChessCoordinate(CCPoint point)
 
 }
 
+
+void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
+{
+	if((x != -1 && y!=-1 )&&( x<=GRIDNUM && y<=GRIDNUM))
+	{
+		
+		CCLOG("now in createPiece!");
+		if(role == BLACKSTATUS)	
+		{
+			CCLOG("blackStatus!");
+			m_chessPiece = BlackChessPiece::create();	
+			m_blackStore++;		
+			m_blackStatus->setStore(m_blackStore);
+		}
+		else if(role == WHITESTATUS)
+		{
+			CCLOG("whiteStatus!");
+			m_chessPiece = WhiteChessPiece::create();
+			m_whiteStore++;	
+			m_whiteStatus->setStore(m_whiteStore);
+		
+		}
+		int pixel_x = x*PIECESIZE.width + PIECESIZE.width/2; 
+		int pixel_y = (GRIDNUM - y)*PIECESIZE.height + PIECESIZE.height/2;
+		m_chessPiece->setPosition(ccp(STARTPOINT.x+pixel_x,pixel_y-(SCREENSIZE.height - STARTPOINT.y)));
+		addChild(m_chessPiece);
+		DicAddChild(x,y,m_chessPiece);
+	
+	}
+
+
+}
 void ChessBoardLayer::createPiece(CCPoint point,enum PieceStatus role)
 {
 
@@ -131,11 +176,12 @@ void ChessBoardLayer::createPiece(CCPoint point,enum PieceStatus role)
 	
 	}
 
-}
+		}
 
 void ChessBoardLayer::DicAddChild(int x,int y,ChessPiece *piece)
 {
-	m_chessPieceDic->setObject(piece,makeKey(x,y));
+	std::string str = makeKey(x,y);
+	m_chessPieceDic->setObject(piece,str);
 
 }
 
@@ -156,34 +202,46 @@ int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentR
 	
 	if(chessBuf[temp_x][temp_y] != EMPTYSTATUS)
 		return 0;
+		CCLOG("now in judge Rule!");
 	for(i = 0; i < 8 ; i++)
 	{
 		temp_x += dir[i][0];
 		temp_y += dir[i][1];
 
 		if((temp_x < GRIDNUM && temp_x >=0 && temp_y < GRIDNUM && temp_y >=0)
-		 && (chessBuf[temp_x][temp_y] !=m_currentRole && chessBuf[temp_x][temp_y] != EMPTYSTATUS))
+		 && (chessBuf[temp_x][temp_y] !=currentRole && chessBuf[temp_x][temp_y] != EMPTYSTATUS))
 		 {
 			temp_x += dir[i][0]; 
 			temp_y += dir[i][1];
-
+			CCLOG("now in chessbuf dir!");
+			
 			while(temp_x < GRIDNUM && temp_x >=0 && temp_y < GRIDNUM && temp_y >=0)
 			{
+				CCLOG("positionStatus:%d,currentRole:%d",chessBuf[temp_x][temp_y],currentRole);
 				if(chessBuf[temp_x][temp_y] == EMPTYSTATUS)	
 					break;
-				if(chessBuf[temp_x][temp_y] == m_currentRole)
+				if(chessBuf[temp_x][temp_y] == currentRole)
 				{
-					chessBuf[temp_x][temp_y] = m_currentRole;
+
+					CCLOG("now in while##");
+					chessBuf[temp_x][temp_y] = currentRole;
+					//addChessPiece
+					//createPiece(temp_x,temp_y,m_currentRole);
 					temp_x -= dir[i][0];
 					temp_y -= dir[i][1];
 
 					while((temp_x != x) || (temp_y != y))
 					{
-						chessBuf[temp_x][temp_y] = m_currentRole;
+						chessBuf[temp_x][temp_y] = currentRole;
+						//addchesspiece
+						
+
 						temp_x -= dir[i][0];
 						temp_y -= dir[i][1];
 						eatNum++;
 					}
+					CCLOG("temp_x:%d,temp_y:%d",temp_x,temp_y);
+				//    createPiece(temp_x,temp_y,currentRole);
 					break;
 				
 				}

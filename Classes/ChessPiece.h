@@ -8,17 +8,33 @@ USING_NS_CC;
 class ChessPiece : public CCSprite
 {
 public:
-	ChessPiece * createWhitePiece();
-	ChessPiece * createBlackPiece();
+	virtual bool init();
 	void changeRole(enum PieceStatus role);
 	void animationInit();
-	CREATE_FUNC(ChessPiece);
-private:
+protected:
 	int m_pieceRole;	
 	CCSpriteFrameCache *m_frameCache;
 	CCAnimate* m_WhiteToBlack;
 	CCAnimate* m_BlackToWhite;
-	ChessPiece* m_piece;
+};
+
+class WhiteChessPiece : public ChessPiece
+{
+public:
+	virtual bool init();
+
+	CREATE_FUNC(WhiteChessPiece);
+
+};
+
+class BlackChessPiece : public ChessPiece
+{
+public:
+	virtual bool init();
+	
+
+	CREATE_FUNC(BlackChessPiece);
+
 };
 
 #endif

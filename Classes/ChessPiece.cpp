@@ -81,14 +81,22 @@ void ChessPiece::changeRole(enum PieceStatus role)
 
 		if(role == BLACKSTATUS)			
 		{	//m_WhiteToBlack
+			m_pieceRole = BLACKSTATUS;
 			this->runAction(m_WhiteToBlack);
 		}
 		else if(role == WHITESTATUS)
 		{	//m_BlackToWhite
+			m_pieceRole = WHITESTATUS;
 			this->runAction(m_BlackToWhite);	
 		}
 	
 }
+PieceStatus ChessPiece::getPieceRole()
+{
+	return m_pieceRole;
+
+}
+
 
 //whiteChessPiece 
 

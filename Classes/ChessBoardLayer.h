@@ -34,6 +34,8 @@ public:
 	void setCurrentRole(PieceStatus role);	
 	void changeCurrentRole();
 
+	void drawChessPiece();
+
 	CREATE_FUNC(ChessBoardLayer);	
 private:
 	WhiteStoreLayer* m_whiteStatus;
@@ -45,7 +47,10 @@ private:
 	enum PieceStatus m_currentRole;	
 //	CCDictionary *m_chessPieceDic;
 	ChessPiece* m_chessPiece;
-	std::map<std::string,ChessPiece*> m_chessPieceDic;
+
+	typedef std::map<std::string,ChessPiece*> ChessPieceDic;
+
+	ChessPieceDic m_chessPieceDic;
 };
 
 #endif

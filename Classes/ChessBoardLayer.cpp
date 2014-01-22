@@ -98,6 +98,7 @@ void ChessBoardLayer::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
 		int num = judgeRule(position.x,position.y,NULL,m_currentRole);
 		if(num != 0)
 			changeCurrentRole();	
+		drawChessPiece();
 	
 	}
 //	getPieceFromDic(3,4)->changeRole(WHITESTATUS);
@@ -183,7 +184,13 @@ void ChessBoardLayer::DicAddChild(int x,int y,ChessPiece *piece)
 ChessPiece* ChessBoardLayer::getPieceFromDic(int x,int y)
 {
 //	return (ChessPiece*)m_chessPieceDic->objectForKey(makeKey(x,y));
-	return m_chessPieceDic.find(makeKey(x,y))->second;
+	ChessPieceDic::iterator it;
+	it = m_chessPieceDic.find(makeKey(x,y));
+	if(it == m_chessPieceDic.end())
+	{
+		return NULL;	
+	}
+	return it->second;
 
 }
 
@@ -205,6 +212,7 @@ void ChessBoardLayer::changeCurrentRole()
 	}
 
 }
+
 int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentRole)
 {
 	if(x < 0 || x >=GRIDNUM || y < 0 || y >=GRIDNUM)
@@ -250,7 +258,7 @@ int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentR
 					{
 						chessBuf[temp_x][temp_y] = currentRole;
 						//addchesspiece
-						getPieceFromDic(temp_x,temp_y)->changeRole(currentRole);
+				//		getPieceFromDic(temp_x,temp_y)->changeRole(currentRole);
 						
 //						CCLOG("temp_x:%d,temp_y:%d",temp_x,temp_y);
 						temp_x -= dir[i][0];
@@ -258,7 +266,7 @@ int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentR
 						eatNum++;
 					}
 					chessBuf[temp_x][temp_y] = currentRole;
-					createPiece(temp_x,temp_y,currentRole);
+				//		createPiece(temp_x,temp_y,currentRole);
 				//	CCLOG("temp_x:%d,temp_y:%d",temp_x,temp_y);
 					break;
 				
@@ -285,6 +293,32 @@ std::string ChessBoardLayer::makeKey(int x, int y)
 	char key[10];
 	sprintf(key,"%d%d",x,y);
 	return key;
+}
+
+void ChessBoardLayer::drawChessPiece()
+{
+	int x = 0,y = 0;
+	for(x = 0 ; x < 8 ; x++)
+	{
+		for(y = 0; y < 8 ; y++)	
+		{
+			if(chessBuf[x][y] == EMPTYSTATUS)		
+				continue;
+			ChessPiece *ptr = getPieceFromDic(x,y);
+			if(ptr == NULL)
+			{
+				createPiece(x,y,(PieceStatus)chessBuf[x][y]);	
+
+			}
+			else
+			{
+			
+				ptr->changeRole((PieceStatus)chessBuf[x][y]);	
+			}
+		
+		}
+	}
+
 }
 
 void ChessBoardLayer::update(float dt)

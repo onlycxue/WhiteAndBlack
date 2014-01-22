@@ -10,9 +10,10 @@ class ChessPiece : public CCSprite
 public:
 	virtual bool init();
 	void changeRole(enum PieceStatus role);
+	PieceStatus getPieceRole();
 	void animationInit();
 protected:
-	int m_pieceRole;	
+	PieceStatus m_pieceRole;	
 	CCSpriteFrameCache *m_frameCache;
 	CCAnimate* m_WhiteToBlack;
 	CCAnimate* m_BlackToWhite;
@@ -32,7 +33,6 @@ class BlackChessPiece : public ChessPiece
 public:
 	virtual bool init();
 	
-
 	CREATE_FUNC(BlackChessPiece);
 
 };

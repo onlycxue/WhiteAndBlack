@@ -6,7 +6,7 @@
 #include "define.h"
 #include "ChessPiece.h"
 #include <iostream>
-
+#include <map>
 
 USING_NS_CC;
 //chess board position
@@ -23,7 +23,6 @@ public:
 	virtual bool init();
 	virtual void ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent);
 	virtual void update(float dt);
-	void createPiece(CCPoint point,enum PieceStatus role);
 	void createPiece(int x,int y,enum PieceStatus role);
 	ChessCoordinate pixelToChessCoordinate(CCPoint point);
 	void chessBufInit();
@@ -32,6 +31,8 @@ public:
 	int judgeRule(int x,int y,void *chess,enum PieceStatus currentRole);
 	void DicAddChild(int x,int y,ChessPiece *piece);	
 	ChessPiece* getPieceFromDic(int x,int y);
+	void setCurrentRole(PieceStatus role);	
+	void changeCurrentRole();
 
 	CREATE_FUNC(ChessBoardLayer);	
 private:
@@ -42,8 +43,9 @@ private:
 	int chessBuf[8][8];
 	static int dir[8][2];
 	enum PieceStatus m_currentRole;	
-	CCDictionary *m_chessPieceDic;
+//	CCDictionary *m_chessPieceDic;
 	ChessPiece* m_chessPiece;
+	std::map<std::string,ChessPiece*> m_chessPieceDic;
 };
 
 #endif

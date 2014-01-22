@@ -44,9 +44,10 @@ void ChessPiece::animationInit()
 	for(int i = 1;i < 3; i++ )
 	{
 		sprintf(str,"piece_%02d.png",i);
-		CCSpriteFrame *frame = m_frameCache->spriteFrameByName(str); animFrames->addObject(frame);
+		CCSpriteFrame *frame = m_frameCache->spriteFrameByName(str); 
+		animFrames->addObject(frame);
 	}
-	CCAnimation *whiteToBlack = CCAnimation::createWithSpriteFrames(animFrames,2.0f);
+	CCAnimation *whiteToBlack = CCAnimation::createWithSpriteFrames(animFrames,0.2f);
 	CCAnimationCache::sharedAnimationCache()->addAnimation(whiteToBlack,"whiteToBlack");
 	animFrames->removeAllObjects();
 	
@@ -57,7 +58,7 @@ void ChessPiece::animationInit()
 		animFrames->addObject(frame);
 	
 	}
-	CCAnimation *blackToWhite = CCAnimation::createWithSpriteFrames(animFrames,2.0f);
+	CCAnimation *blackToWhite = CCAnimation::createWithSpriteFrames(animFrames,0.2f);
 	CCAnimationCache::sharedAnimationCache()->addAnimation(blackToWhite,"blackToWhite");
 	animFrames->removeAllObjects();
 
@@ -68,26 +69,25 @@ void ChessPiece::animationInit()
 	CCAnimation* wtb = animCache->animationByName("whiteToBlack");
 
 	m_WhiteToBlack = CCAnimate::create(wtb);
+	m_WhiteToBlack->retain();
 	m_BlackToWhite = CCAnimate::create(btw);
+	m_BlackToWhite->retain();
 
 }
 void ChessPiece::changeRole(enum PieceStatus role)
 {
 	//change to role
-	if(m_pieceRole != role)
-	{
-		if(m_pieceRole == BLACKSTATUS)			
+		CCLog("changeRole!");
+
+		if(role == BLACKSTATUS)			
 		{	//m_WhiteToBlack
+			this->runAction(m_WhiteToBlack);
+		}
+		else if(role == WHITESTATUS)
+		{	//m_BlackToWhite
 			this->runAction(m_BlackToWhite);	
 		}
-		else if(m_pieceRole == WHITESTATUS)
-		{	//m_BlackToWhite
-			this->runAction(m_WhiteToBlack);
 	
-		}
-	
-	}
-
 }
 
 //whiteChessPiece 

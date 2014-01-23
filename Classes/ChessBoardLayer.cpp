@@ -45,8 +45,6 @@ bool ChessBoardLayer::init()
 	
 	chessBufInit();
 	setTouchEnabled(true);
-	m_whiteStore = 0;
-	m_blackStore = 0;
 	this->scheduleUpdate();
 	m_currentRole =	BLACKSTATUS;
 	return true;
@@ -97,8 +95,12 @@ void ChessBoardLayer::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
 		CCLOG("position_x:%d,position_y:%d",position.x,position.y);
 		int num = judgeRule(position.x,position.y,NULL,m_currentRole);
 		if(num != 0)
+		{
+				
+			changeStore(m_currentRole,num);
 			changeCurrentRole();	
-		drawChessPiece();
+			drawChessPiece();
+		}
 	
 	}
 //	getPieceFromDic(3,4)->changeRole(WHITESTATUS);
@@ -140,8 +142,9 @@ void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
 		{
 //			CCLOG("blackStatus!");
 			m_chessPiece = BlackChessPiece::create();	
-			m_blackStore++;		
-			m_blackStatus->setStore(m_blackStore);
+		//	m_blackStore++;		
+		//	m_blackStatus->setStore(m_blackStore);
+			m_blackStatus->addStore(1);
 			int pixel_x = x*PIECESIZE.width + PIECESIZE.width/2; 
 			int pixel_y = (GRIDNUM - y)*PIECESIZE.height + PIECESIZE.height/2;
 			m_chessPiece->setPosition(ccp(STARTPOINT.x+pixel_x,pixel_y-(SCREENSIZE.height - STARTPOINT.y)));
@@ -154,8 +157,9 @@ void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
 		{
 //			CCLOG("whiteStatus!");
 			m_chessPiece = WhiteChessPiece::create();
-			m_whiteStore++;	
-			m_whiteStatus->setStore(m_whiteStore);
+		//	m_whiteStore++;	
+		//	m_whiteStatus->setStore(m_whiteStore);
+			m_whiteStatus->addStore(1);
 			int pixel_x = x*PIECESIZE.width + PIECESIZE.width/2; 
 			int pixel_y = (GRIDNUM - y)*PIECESIZE.height + PIECESIZE.height/2;
 			m_chessPiece->setPosition(ccp(STARTPOINT.x+pixel_x,pixel_y-(SCREENSIZE.height - STARTPOINT.y)));
@@ -295,6 +299,21 @@ std::string ChessBoardLayer::makeKey(int x, int y)
 	return key;
 }
 
+void ChessBoardLayer::changeStore(PieceStatus role,int num)
+{
+	if(role == WHITESTATUS)
+	{
+		m_whiteStatus->addStore(num);
+		m_blackStatus->subStore(num);
+	}
+	else if(role == BLACKSTATUS)
+	{
+		m_whiteStatus->subStore(num);
+		m_blackStatus->addStore(num);
+	}
+
+}
+
 void ChessBoardLayer::drawChessPiece()
 {
 	int x = 0,y = 0;
@@ -312,8 +331,8 @@ void ChessBoardLayer::drawChessPiece()
 			}
 			else
 			{
-			
-				ptr->changeRole((PieceStatus)chessBuf[x][y]);	
+				if(ptr->getPieceRole() != chessBuf[x][y])	
+					ptr->changeRole((PieceStatus)chessBuf[x][y]);	
 			}
 		
 		}

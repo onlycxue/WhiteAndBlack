@@ -33,15 +33,13 @@ public:
 	ChessPiece* getPieceFromDic(int x,int y);
 	void setCurrentRole(PieceStatus role);	
 	void changeCurrentRole();
-
 	void drawChessPiece();
+	void changeStore(PieceStatus role,int num);
 
 	CREATE_FUNC(ChessBoardLayer);	
 private:
 	WhiteStoreLayer* m_whiteStatus;
 	BlackStoreLayer* m_blackStatus;
-	int m_whiteStore;
-	int m_blackStore;
 	int chessBuf[8][8];
 	static int dir[8][2];
 	enum PieceStatus m_currentRole;	

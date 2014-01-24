@@ -17,6 +17,8 @@ public:
 
     CCLabelTTF* m_store;
 	CCLabelTTF* m_time;
+	void addStore(int num);
+	void subStore(int num);
 	
 	virtual void updateStore();
 	virtual void updateTime();

@@ -58,6 +58,18 @@ void StoreLayer::updateTime()
 
 }
 
+void StoreLayer::addStore(int num)
+{
+	_store += num;	
+
+
+
+}
+void StoreLayer::subStore(int num)
+{
+	_store -= num;
+
+}
 void StoreLayer::onExit()
 {
 //	m_store->release();

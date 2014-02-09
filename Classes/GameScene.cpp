@@ -28,6 +28,7 @@ cocos2d::CCScene* GameScene::scene()
 	scene->addChild(layer,1);
 //	m_parentScene=scene;
 	//scene->addChild(GameScene::create());
+	 
 	ChessBoardLayer* chessLayer = ChessBoardLayer::create();
 	scene->addChild(chessLayer,0);
 
@@ -61,12 +62,18 @@ bool GameScene::init()
 	CCMenu *pMenu = CCMenu::create(backButton,NULL);
 	pMenu->setPosition(CCPointZero);
 	addChild(pMenu,1);
-	//add background
-//	CCSprite* pSprite = CCSprite::create("gameBackGroud.png");
-//	pSprite->setPosition(ccp(origin.x+visibleSize.width/2,origin.y+visibleSize.height/2));
 	
 
-//	addChild(pSprite,0);
+//	preload music 
+	SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic();
+	SimpleAudioEngine::sharedEngine()->preloadEffect();
+	//set Volume
+	SimpleAudioEngine::sharedEngine()->setEffectVolume(0.5f);
+	SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5f);
+	//play background Music
+	SimpleAudioEngine::sharedEngine()->playBackgroundMusic(,true);
+	
+
 	return true;
 }
 

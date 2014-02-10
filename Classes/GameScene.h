@@ -6,7 +6,8 @@
 #include "SelectWindow.h"
 #include "ChessBoardLayer.h"
 #include "StoreLayer.h"
-
+#include "define.h"
+#include "../../../CocosDenshion/include/SimpleAudioEngine.h"
 
 class GameScene : public cocos2d::CCLayer
 {

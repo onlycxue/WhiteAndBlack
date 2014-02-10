@@ -7,8 +7,10 @@
 #include "ChessPiece.h"
 #include <iostream>
 #include <map>
-
+#include "../../../CocosDenshion/include/SimpleAudioEngine.h"
 USING_NS_CC;
+using namespace CocosDenshion;
+
 //chess board position
 typedef struct 
 {

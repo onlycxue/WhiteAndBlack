@@ -15,4 +15,7 @@ enum PieceStatus
 	WHITESTATUS,
 };
 
+#define MUSIC_FILE "background.ogg"
+#define EFFECT_FILE "water.wav"
+
 #endif

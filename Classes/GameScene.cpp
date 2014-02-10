@@ -18,6 +18,7 @@
 #include "GameScene.h"
 
 USING_NS_CC;
+using namespace CocosDenshion;
 
 CCScene* GameScene::m_parentScene=NULL;
 cocos2d::CCScene* GameScene::scene()
@@ -65,13 +66,13 @@ bool GameScene::init()
 	
 
 //	preload music 
-	SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic();
-	SimpleAudioEngine::sharedEngine()->preloadEffect();
+	SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(MUSIC_FILE);
+	SimpleAudioEngine::sharedEngine()->preloadEffect(EFFECT_FILE);
 	//set Volume
-	SimpleAudioEngine::sharedEngine()->setEffectVolume(0.5f);
+	SimpleAudioEngine::sharedEngine()->setEffectsVolume(0.5f);
 	SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5f);
 	//play background Music
-	SimpleAudioEngine::sharedEngine()->playBackgroundMusic(,true);
+	SimpleAudioEngine::sharedEngine()->playBackgroundMusic(MUSIC_FILE,true);
 	
 
 	return true;

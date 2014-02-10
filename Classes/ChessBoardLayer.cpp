@@ -151,6 +151,7 @@ void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
 			addChild(m_chessPiece);
 			//m_chessPiece->retain();
 			DicAddChild(x,y,m_chessPiece);
+			SimpleAudioEngine::sharedEngine()->playEffect(EFFECT_FILE,true);
 
 		}
 		else if(role == WHITESTATUS)
@@ -166,6 +167,7 @@ void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
 			addChild(m_chessPiece);
 			//m_chessPiece->retain();
 			DicAddChild(x,y,m_chessPiece);
+			SimpleAudioEngine::sharedEngine()->playEffect(EFFECT_FILE,true);
 
 		}
 			

@@ -15,7 +15,9 @@ COCOS_ROOT = ../../..
 include $(COCOS_ROOT)/cocos2dx/proj.linux/cocos2dx.mk
 
 SHAREDLIBS += -lcocos2d
+SHAREDLIBS += -lcocosdenshion
 COCOS_LIBS = $(LIB_DIR)/libcocos2d.so
+COCOS_LIBS = $(LIB_DIR)/libcocosdenshion.so
 
 $(TARGET): $(OBJECTS) $(STATICLIBS) $(COCOS_LIBS) $(CORE_MAKEFILE_LIST)
 	@mkdir -p $(@D)

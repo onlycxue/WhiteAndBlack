@@ -9,7 +9,9 @@ SOURCES = main.cpp \
 		../Classes/SelectWindow.cpp \
 		../Classes/ChessBoardLayer.cpp \
 		../Classes/StoreLayer.cpp \
-		../Classes/ChessPiece.cpp
+		../Classes/ChessPiece.cpp \
+		../Classes/AIChessBoard.cpp \
+		../Classes/VSChessBoard.cpp 
 
 COCOS_ROOT = ../../..
 include $(COCOS_ROOT)/cocos2dx/proj.linux/cocos2dx.mk

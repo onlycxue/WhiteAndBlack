@@ -15,5 +15,21 @@
  *
  * =====================================================================================
  */
+#include "AIChessBoard.h"
 
+bool AIChessBoard::init()
+{
+	if(!ChessBoardLayer::init())	
+	{
+		return false;	
+	}
+	return true;
+
+
+}
+void AIChessBoard::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
+{
+	ChessBoardLayer::ccTouchesBegan(pTouches,pEvent);
+
+}
 

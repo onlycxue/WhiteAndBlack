@@ -16,4 +16,25 @@
  * =====================================================================================
  */
 
+#include "VSChessBoard.h"
+
+bool VSChessBoard::init()
+{
+	if(!ChessBoardLayer::init());
+	{
+		return false;
+	}
+
+	return true;
+
+
+
+}
+
+void VSChessBoard::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
+{
+	
+
+}
+
 

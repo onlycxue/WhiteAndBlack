@@ -35,6 +35,7 @@ public:
 	ChessPiece* getPieceFromDic(int x,int y);
 	void setCurrentRole(PieceStatus role);	
 	void changeCurrentRole();
+	enum PieceStatus getCurrentRole();
 	void drawChessPiece();
 	void changeStore(PieceStatus role,int num);
 

@@ -151,7 +151,7 @@ void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
 			addChild(m_chessPiece);
 			//m_chessPiece->retain();
 			DicAddChild(x,y,m_chessPiece);
-			SimpleAudioEngine::sharedEngine()->playEffect(EFFECT_FILE,true);
+			SimpleAudioEngine::sharedEngine()->playEffect(EFFECT_FILE,false);
 
 		}
 		else if(role == WHITESTATUS)
@@ -167,7 +167,7 @@ void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)
 			addChild(m_chessPiece);
 			//m_chessPiece->retain();
 			DicAddChild(x,y,m_chessPiece);
-			SimpleAudioEngine::sharedEngine()->playEffect(EFFECT_FILE,true);
+			SimpleAudioEngine::sharedEngine()->playEffect(EFFECT_FILE,false);
 
 		}
 			
@@ -217,6 +217,10 @@ void ChessBoardLayer::changeCurrentRole()
 	
 	}
 
+}
+enum PieceStatus ChessBoardLayer::getCurrentRole()
+{
+	return m_currentRole;
 }
 
 int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentRole)

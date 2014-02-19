@@ -66,13 +66,15 @@ bool GameScene::init()
 	
 
 //	preload music 
-	SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(MUSIC_FILE);
-	SimpleAudioEngine::sharedEngine()->preloadEffect(EFFECT_FILE);
+//	SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(MUSIC_FILE);
+//	SimpleAudioEngine::sharedEngine()->preloadEffect(EFFECT_FILE);
 	//set Volume
-	SimpleAudioEngine::sharedEngine()->setEffectsVolume(0.5f);
-	SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5f);
+//	SimpleAudioEngine::sharedEngine()->setEffectsVolume(0.5f);
+//	SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5f);
 	//play background Music
-	SimpleAudioEngine::sharedEngine()->playBackgroundMusic(MUSIC_FILE,true);
+//	SimpleAudioEngine::sharedEngine()->playBackgroundMusic(MUSIC_FILE,true);
+	SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();	
+
 	
 
 	return true;

@@ -1,0 +1,277 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AppDelegate	AppDelegate.cpp	/^AppDelegate::AppDelegate() {$/;"	f	class:AppDelegate	signature:()
+AppDelegate	AppDelegate.h	/^    AppDelegate();$/;"	p	class:AppDelegate	access:public	signature:()
+AppDelegate	AppDelegate.h	/^class  AppDelegate : private cocos2d::CCApplication$/;"	c	inherits:cocos2d::CCApplication
+AppDelegate::AppDelegate	AppDelegate.cpp	/^AppDelegate::AppDelegate() {$/;"	f	class:AppDelegate	signature:()
+AppDelegate::AppDelegate	AppDelegate.h	/^    AppDelegate();$/;"	p	class:AppDelegate	access:public	signature:()
+AppDelegate::applicationDidEnterBackground	AppDelegate.cpp	/^void AppDelegate::applicationDidEnterBackground() {$/;"	f	class:AppDelegate	signature:()
+AppDelegate::applicationDidEnterBackground	AppDelegate.h	/^    virtual void applicationDidEnterBackground();$/;"	p	class:AppDelegate	access:public	signature:()
+AppDelegate::applicationDidFinishLaunching	AppDelegate.cpp	/^bool AppDelegate::applicationDidFinishLaunching() {$/;"	f	class:AppDelegate	signature:()
+AppDelegate::applicationDidFinishLaunching	AppDelegate.h	/^    virtual bool applicationDidFinishLaunching();$/;"	p	class:AppDelegate	access:public	signature:()
+AppDelegate::applicationWillEnterForeground	AppDelegate.cpp	/^void AppDelegate::applicationWillEnterForeground() {$/;"	f	class:AppDelegate	signature:()
+AppDelegate::applicationWillEnterForeground	AppDelegate.h	/^    virtual void applicationWillEnterForeground();$/;"	p	class:AppDelegate	access:public	signature:()
+AppDelegate::~AppDelegate	AppDelegate.cpp	/^AppDelegate::~AppDelegate() $/;"	f	class:AppDelegate	signature:()
+AppDelegate::~AppDelegate	AppDelegate.h	/^    virtual ~AppDelegate();$/;"	p	class:AppDelegate	access:public	signature:()
+BLACKSTATUS	define.h	/^	BLACKSTATUS,$/;"	e	enum:PieceStatus
+BlackChessPiece	ChessPiece.h	/^class BlackChessPiece : public ChessPiece$/;"	c	inherits:ChessPiece
+BlackChessPiece::CREATE_FUNC	ChessPiece.h	/^	CREATE_FUNC(BlackChessPiece);$/;"	p	class:BlackChessPiece	access:public	signature:(BlackChessPiece)
+BlackChessPiece::init	ChessPiece.cpp	/^bool BlackChessPiece::init()$/;"	f	class:BlackChessPiece	signature:()
+BlackChessPiece::init	ChessPiece.h	/^	virtual bool init();$/;"	p	class:BlackChessPiece	access:public	signature:()
+BlackStoreLayer	StoreLayer.h	/^class BlackStoreLayer: public StoreLayer$/;"	c	inherits:StoreLayer
+BlackStoreLayer::CREATE_FUNC	StoreLayer.h	/^	CREATE_FUNC(BlackStoreLayer);$/;"	p	class:BlackStoreLayer	access:public	signature:(BlackStoreLayer)
+BlackStoreLayer::init	StoreLayer.cpp	/^bool BlackStoreLayer::init()$/;"	f	class:BlackStoreLayer	signature:()
+BlackStoreLayer::init	StoreLayer.h	/^	virtual bool init();$/;"	p	class:BlackStoreLayer	access:public	signature:()
+CC_SYNTHESIZE	StoreLayer.h	/^	CC_SYNTHESIZE(CCSprite*,_Role,Role);$/;"	p	class:StoreLayer	access:public	signature:(CCSprite*,_Role,Role)
+CC_SYNTHESIZE	StoreLayer.h	/^	CC_SYNTHESIZE(int,_store,Store);$/;"	p	class:StoreLayer	access:public	signature:(int,_store,Store)
+CC_SYNTHESIZE	StoreLayer.h	/^	CC_SYNTHESIZE(int,_time,Time);$/;"	p	class:StoreLayer	access:public	signature:(int,_time,Time)
+CREATE_FUNC	ChessBoardLayer.h	/^	CREATE_FUNC(ChessBoardLayer);	$/;"	p	class:ChessBoardLayer	access:public	signature:(ChessBoardLayer)
+CREATE_FUNC	ChessPiece.h	/^	CREATE_FUNC(BlackChessPiece);$/;"	p	class:BlackChessPiece	access:public	signature:(BlackChessPiece)
+CREATE_FUNC	ChessPiece.h	/^	CREATE_FUNC(WhiteChessPiece);$/;"	p	class:WhiteChessPiece	access:public	signature:(WhiteChessPiece)
+CREATE_FUNC	GameScene.h	/^	CREATE_FUNC(GameScene);$/;"	p	class:GameScene	access:public	signature:(GameScene)
+CREATE_FUNC	HelloWorldScene.h	/^    CREATE_FUNC(HelloWorld);$/;"	p	class:HelloWorld	access:public	signature:(HelloWorld)
+CREATE_FUNC	SelectWindow.h	/^	CREATE_FUNC(SelectWindow);	$/;"	p	class:SelectWindow	access:public	signature:(SelectWindow)
+CREATE_FUNC	StoreLayer.h	/^	CREATE_FUNC(BlackStoreLayer);$/;"	p	class:BlackStoreLayer	access:public	signature:(BlackStoreLayer)
+CREATE_FUNC	StoreLayer.h	/^	CREATE_FUNC(StoreLayer);$/;"	p	class:StoreLayer	access:public	signature:(StoreLayer)
+CREATE_FUNC	StoreLayer.h	/^	CREATE_FUNC(WhiteStoreLayer);	$/;"	p	class:WhiteStoreLayer	access:public	signature:(WhiteStoreLayer)
+ChessBoardLayer	ChessBoardLayer.h	/^class ChessBoardLayer : public cocos2d::CCLayer$/;"	c	inherits:cocos2d::CCLayer
+ChessBoardLayer::CREATE_FUNC	ChessBoardLayer.h	/^	CREATE_FUNC(ChessBoardLayer);	$/;"	p	class:ChessBoardLayer	access:public	signature:(ChessBoardLayer)
+ChessBoardLayer::ChessPieceDic	ChessBoardLayer.h	/^	typedef std::map<std::string,ChessPiece*> ChessPieceDic;$/;"	t	class:ChessBoardLayer	access:private
+ChessBoardLayer::DicAddChild	ChessBoardLayer.cpp	/^void ChessBoardLayer::DicAddChild(int x,int y,ChessPiece *piece)$/;"	f	class:ChessBoardLayer	signature:(int x,int y,ChessPiece *piece)
+ChessBoardLayer::DicAddChild	ChessBoardLayer.h	/^	void DicAddChild(int x,int y,ChessPiece *piece);	$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y,ChessPiece *piece)
+ChessBoardLayer::ccTouchesBegan	ChessBoardLayer.cpp	/^void ChessBoardLayer::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)$/;"	f	class:ChessBoardLayer	signature:(CCSet* pTouches,CCEvent* pEvent)
+ChessBoardLayer::ccTouchesBegan	ChessBoardLayer.h	/^	virtual void ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent);$/;"	p	class:ChessBoardLayer	access:public	signature:(CCSet* pTouches,CCEvent* pEvent)
+ChessBoardLayer::changeCurrentRole	ChessBoardLayer.cpp	/^void ChessBoardLayer::changeCurrentRole()$/;"	f	class:ChessBoardLayer	signature:()
+ChessBoardLayer::changeCurrentRole	ChessBoardLayer.h	/^	void changeCurrentRole();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+ChessBoardLayer::changeStore	ChessBoardLayer.cpp	/^void ChessBoardLayer::changeStore(PieceStatus role,int num)$/;"	f	class:ChessBoardLayer	signature:(PieceStatus role,int num)
+ChessBoardLayer::changeStore	ChessBoardLayer.h	/^	void changeStore(PieceStatus role,int num);$/;"	p	class:ChessBoardLayer	access:public	signature:(PieceStatus role,int num)
+ChessBoardLayer::chessBuf	ChessBoardLayer.h	/^	int chessBuf[8][8];$/;"	m	class:ChessBoardLayer	access:private
+ChessBoardLayer::chessBufInit	ChessBoardLayer.cpp	/^void ChessBoardLayer::chessBufInit()$/;"	f	class:ChessBoardLayer	signature:()
+ChessBoardLayer::chessBufInit	ChessBoardLayer.h	/^	void chessBufInit();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+ChessBoardLayer::createPiece	ChessBoardLayer.cpp	/^void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)$/;"	f	class:ChessBoardLayer	signature:(int x,int y,enum PieceStatus role)
+ChessBoardLayer::createPiece	ChessBoardLayer.h	/^	void createPiece(int x,int y,enum PieceStatus role);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y,enum PieceStatus role)
+ChessBoardLayer::dir	ChessBoardLayer.cpp	/^int ChessBoardLayer::dir[8][2] = {{1,0},{1,-1},{0,-1},{-1,-1},{-1,0},{-1,1},{0,1},{1,1}}; $/;"	m	class:ChessBoardLayer	file:
+ChessBoardLayer::dir	ChessBoardLayer.h	/^	static int dir[8][2];$/;"	m	class:ChessBoardLayer	access:private
+ChessBoardLayer::drawChessPiece	ChessBoardLayer.cpp	/^void ChessBoardLayer::drawChessPiece()$/;"	f	class:ChessBoardLayer	signature:()
+ChessBoardLayer::drawChessPiece	ChessBoardLayer.h	/^	void drawChessPiece();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+ChessBoardLayer::getPieceFromDic	ChessBoardLayer.cpp	/^ChessPiece* ChessBoardLayer::getPieceFromDic(int x,int y)$/;"	f	class:ChessBoardLayer	signature:(int x,int y)
+ChessBoardLayer::getPieceFromDic	ChessBoardLayer.h	/^	ChessPiece* getPieceFromDic(int x,int y);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y)
+ChessBoardLayer::init	ChessBoardLayer.cpp	/^bool ChessBoardLayer::init()$/;"	f	class:ChessBoardLayer	signature:()
+ChessBoardLayer::init	ChessBoardLayer.h	/^	virtual bool init();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+ChessBoardLayer::judgeRule	ChessBoardLayer.cpp	/^int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentRole)$/;"	f	class:ChessBoardLayer	signature:(int x,int y,void *chess,enum PieceStatus currentRole)
+ChessBoardLayer::judgeRule	ChessBoardLayer.h	/^	int judgeRule(int x,int y,void *chess,enum PieceStatus currentRole);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y,void *chess,enum PieceStatus currentRole)
+ChessBoardLayer::m_blackStatus	ChessBoardLayer.h	/^	BlackStoreLayer* m_blackStatus;$/;"	m	class:ChessBoardLayer	access:private
+ChessBoardLayer::m_chessPiece	ChessBoardLayer.h	/^	ChessPiece* m_chessPiece;$/;"	m	class:ChessBoardLayer	access:private
+ChessBoardLayer::m_chessPieceDic	ChessBoardLayer.h	/^	ChessPieceDic m_chessPieceDic;$/;"	m	class:ChessBoardLayer	access:private
+ChessBoardLayer::m_currentRole	ChessBoardLayer.h	/^	enum PieceStatus m_currentRole;	$/;"	m	class:ChessBoardLayer	typeref:enum:ChessBoardLayer::PieceStatus	access:private
+ChessBoardLayer::m_whiteStatus	ChessBoardLayer.h	/^	WhiteStoreLayer* m_whiteStatus;$/;"	m	class:ChessBoardLayer	access:private
+ChessBoardLayer::makeKey	ChessBoardLayer.cpp	/^std::string ChessBoardLayer::makeKey(int x, int y)$/;"	f	class:ChessBoardLayer	signature:(int x, int y)
+ChessBoardLayer::makeKey	ChessBoardLayer.h	/^	std::string makeKey(int x,int y);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y)
+ChessBoardLayer::pixelToChessCoordinate	ChessBoardLayer.cpp	/^ChessCoordinate ChessBoardLayer::pixelToChessCoordinate(CCPoint point)$/;"	f	class:ChessBoardLayer	signature:(CCPoint point)
+ChessBoardLayer::pixelToChessCoordinate	ChessBoardLayer.h	/^	ChessCoordinate pixelToChessCoordinate(CCPoint point);$/;"	p	class:ChessBoardLayer	access:public	signature:(CCPoint point)
+ChessBoardLayer::setCurrentRole	ChessBoardLayer.cpp	/^void ChessBoardLayer::setCurrentRole(PieceStatus role)	$/;"	f	class:ChessBoardLayer	signature:(PieceStatus role)
+ChessBoardLayer::setCurrentRole	ChessBoardLayer.h	/^	void setCurrentRole(PieceStatus role);	$/;"	p	class:ChessBoardLayer	access:public	signature:(PieceStatus role)
+ChessBoardLayer::update	ChessBoardLayer.cpp	/^void ChessBoardLayer::update(float dt)$/;"	f	class:ChessBoardLayer	signature:(float dt)
+ChessBoardLayer::update	ChessBoardLayer.h	/^	virtual void update(float dt);$/;"	p	class:ChessBoardLayer	access:public	signature:(float dt)
+ChessCoordinate	ChessBoardLayer.h	/^}ChessCoordinate;$/;"	t	typeref:struct:__anon1
+ChessPiece	ChessPiece.h	/^class ChessPiece : public CCSprite$/;"	c	inherits:CCSprite
+ChessPiece::animationInit	ChessPiece.cpp	/^void ChessPiece::animationInit()$/;"	f	class:ChessPiece	signature:()
+ChessPiece::animationInit	ChessPiece.h	/^	void animationInit();$/;"	p	class:ChessPiece	access:public	signature:()
+ChessPiece::changeRole	ChessPiece.cpp	/^void ChessPiece::changeRole(enum PieceStatus role)$/;"	f	class:ChessPiece	signature:(enum PieceStatus role)
+ChessPiece::changeRole	ChessPiece.h	/^	void changeRole(enum PieceStatus role);$/;"	p	class:ChessPiece	access:public	signature:(enum PieceStatus role)
+ChessPiece::getPieceRole	ChessPiece.cpp	/^PieceStatus ChessPiece::getPieceRole()$/;"	f	class:ChessPiece	signature:()
+ChessPiece::getPieceRole	ChessPiece.h	/^	PieceStatus getPieceRole();$/;"	p	class:ChessPiece	access:public	signature:()
+ChessPiece::init	ChessPiece.cpp	/^bool ChessPiece::init()$/;"	f	class:ChessPiece	signature:()
+ChessPiece::init	ChessPiece.h	/^	virtual bool init();$/;"	p	class:ChessPiece	access:public	signature:()
+ChessPiece::m_BlackToWhite	ChessPiece.h	/^	CCAnimate* m_BlackToWhite;$/;"	m	class:ChessPiece	access:protected
+ChessPiece::m_WhiteToBlack	ChessPiece.h	/^	CCAnimate* m_WhiteToBlack;$/;"	m	class:ChessPiece	access:protected
+ChessPiece::m_frameCache	ChessPiece.h	/^	CCSpriteFrameCache *m_frameCache;$/;"	m	class:ChessPiece	access:protected
+ChessPiece::m_pieceRole	ChessPiece.h	/^	PieceStatus m_pieceRole;	$/;"	m	class:ChessPiece	access:protected
+ChessPieceDic	ChessBoardLayer.h	/^	typedef std::map<std::string,ChessPiece*> ChessPieceDic;$/;"	t	class:ChessBoardLayer	access:private
+DicAddChild	ChessBoardLayer.cpp	/^void ChessBoardLayer::DicAddChild(int x,int y,ChessPiece *piece)$/;"	f	class:ChessBoardLayer	signature:(int x,int y,ChessPiece *piece)
+DicAddChild	ChessBoardLayer.h	/^	void DicAddChild(int x,int y,ChessPiece *piece);	$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y,ChessPiece *piece)
+EMPTYSTATUS	define.h	/^	EMPTYSTATUS,$/;"	e	enum:PieceStatus
+ENDPOINT	define.h	6;"	d
+GRIDNUM	define.h	9;"	d
+GameScene	GameScene.h	/^class GameScene : public cocos2d::CCLayer$/;"	c	inherits:cocos2d::CCLayer
+GameScene::CREATE_FUNC	GameScene.h	/^	CREATE_FUNC(GameScene);$/;"	p	class:GameScene	access:public	signature:(GameScene)
+GameScene::init	GameScene.cpp	/^bool GameScene::init()$/;"	f	class:GameScene	signature:()
+GameScene::init	GameScene.h	/^	virtual bool init();$/;"	p	class:GameScene	access:public	signature:()
+GameScene::m_parentScene	GameScene.cpp	/^CCScene* GameScene::m_parentScene=NULL;$/;"	m	class:GameScene	file:
+GameScene::m_parentScene	GameScene.h	/^    static	cocos2d::CCScene* m_parentScene;$/;"	m	class:GameScene	access:private
+GameScene::menuBackCallback	GameScene.cpp	/^void GameScene::menuBackCallback(CCObject* pSender)$/;"	f	class:GameScene	signature:(CCObject* pSender)
+GameScene::menuBackCallback	GameScene.h	/^	void menuBackCallback(CCObject* pSender);$/;"	p	class:GameScene	access:public	signature:(CCObject* pSender)
+GameScene::scene	GameScene.cpp	/^cocos2d::CCScene* GameScene::scene()$/;"	f	class:GameScene	signature:()
+GameScene::scene	GameScene.h	/^	static cocos2d::CCScene* scene();$/;"	p	class:GameScene	access:public	signature:()
+HelloWorld	HelloWorldScene.h	/^class HelloWorld : public cocos2d::CCLayer$/;"	c	inherits:cocos2d::CCLayer
+HelloWorld::CREATE_FUNC	HelloWorldScene.h	/^    CREATE_FUNC(HelloWorld);$/;"	p	class:HelloWorld	access:public	signature:(HelloWorld)
+HelloWorld::init	HelloWorldScene.cpp	/^bool HelloWorld::init()$/;"	f	class:HelloWorld	signature:()
+HelloWorld::init	HelloWorldScene.h	/^    virtual bool init();  $/;"	p	class:HelloWorld	access:public	signature:()
+HelloWorld::menuCloseCallback	HelloWorldScene.cpp	/^void HelloWorld::menuCloseCallback(CCObject* pSender)$/;"	f	class:HelloWorld	signature:(CCObject* pSender)
+HelloWorld::menuCloseCallback	HelloWorldScene.h	/^    void menuCloseCallback(CCObject* pSender);$/;"	p	class:HelloWorld	access:public	signature:(CCObject* pSender)
+HelloWorld::menuMoreCallback	HelloWorldScene.cpp	/^void HelloWorld::menuMoreCallback(CCObject* pSender)$/;"	f	class:HelloWorld	signature:(CCObject* pSender)
+HelloWorld::menuMoreCallback	HelloWorldScene.h	/^	void menuMoreCallback(CCObject* pSender);$/;"	p	class:HelloWorld	access:public	signature:(CCObject* pSender)
+HelloWorld::menuSingalCallback	HelloWorldScene.cpp	/^void HelloWorld::menuSingalCallback(CCObject* pSender)$/;"	f	class:HelloWorld	signature:(CCObject* pSender)
+HelloWorld::menuSingalCallback	HelloWorldScene.h	/^	void menuSingalCallback(CCObject* pSender);$/;"	p	class:HelloWorld	access:public	signature:(CCObject* pSender)
+HelloWorld::scene	HelloWorldScene.cpp	/^CCScene* HelloWorld::scene()$/;"	f	class:HelloWorld	signature:()
+HelloWorld::scene	HelloWorldScene.h	/^    static cocos2d::CCScene* scene();$/;"	p	class:HelloWorld	access:public	signature:()
+PIECESIZE	define.h	7;"	d
+PieceStatus	define.h	/^enum PieceStatus$/;"	g
+SCREENSIZE	define.h	8;"	d
+STARTPOINT	define.h	5;"	d
+SelectWindow	SelectWindow.h	/^class SelectWindow : public cocos2d::CCLayer$/;"	c	inherits:cocos2d::CCLayer
+SelectWindow::CREATE_FUNC	SelectWindow.h	/^	CREATE_FUNC(SelectWindow);	$/;"	p	class:SelectWindow	access:public	signature:(SelectWindow)
+SelectWindow::init	SelectWindow.cpp	/^bool SelectWindow::init()$/;"	f	class:SelectWindow	signature:()
+SelectWindow::init	SelectWindow.h	/^	virtual bool init();$/;"	p	class:SelectWindow	access:public	signature:()
+SelectWindow::menuContinueCallback	SelectWindow.cpp	/^void SelectWindow::menuContinueCallback()$/;"	f	class:SelectWindow	signature:()
+SelectWindow::menuContinueCallback	SelectWindow.h	/^	void menuContinueCallback();$/;"	p	class:SelectWindow	access:public	signature:()
+SelectWindow::menuExitCallback	SelectWindow.cpp	/^void SelectWindow::menuExitCallback()$/;"	f	class:SelectWindow	signature:()
+SelectWindow::menuExitCallback	SelectWindow.h	/^	void menuExitCallback();$/;"	p	class:SelectWindow	access:public	signature:()
+SelectWindow::scene	SelectWindow.cpp	/^cocos2d::CCScene* SelectWindow::scene(cocos2d::CCRenderTexture* bg)$/;"	f	class:SelectWindow	signature:(cocos2d::CCRenderTexture* bg)
+SelectWindow::scene	SelectWindow.h	/^    static cocos2d::CCScene* scene(cocos2d::CCRenderTexture* bg);$/;"	p	class:SelectWindow	access:public	signature:(cocos2d::CCRenderTexture* bg)
+StoreLayer	StoreLayer.h	/^class StoreLayer : public cocos2d::CCLayer$/;"	c	inherits:cocos2d::CCLayer
+StoreLayer::CC_SYNTHESIZE	StoreLayer.h	/^	CC_SYNTHESIZE(CCSprite*,_Role,Role);$/;"	p	class:StoreLayer	access:public	signature:(CCSprite*,_Role,Role)
+StoreLayer::CC_SYNTHESIZE	StoreLayer.h	/^	CC_SYNTHESIZE(int,_store,Store);$/;"	p	class:StoreLayer	access:public	signature:(int,_store,Store)
+StoreLayer::CC_SYNTHESIZE	StoreLayer.h	/^	CC_SYNTHESIZE(int,_time,Time);$/;"	p	class:StoreLayer	access:public	signature:(int,_time,Time)
+StoreLayer::CREATE_FUNC	StoreLayer.h	/^	CREATE_FUNC(StoreLayer);$/;"	p	class:StoreLayer	access:public	signature:(StoreLayer)
+StoreLayer::addStore	StoreLayer.cpp	/^void StoreLayer::addStore(int num)$/;"	f	class:StoreLayer	signature:(int num)
+StoreLayer::addStore	StoreLayer.h	/^	void addStore(int num);$/;"	p	class:StoreLayer	access:public	signature:(int num)
+StoreLayer::init	StoreLayer.cpp	/^bool StoreLayer::init()$/;"	f	class:StoreLayer	signature:()
+StoreLayer::init	StoreLayer.h	/^	virtual bool init();$/;"	p	class:StoreLayer	access:public	signature:()
+StoreLayer::m_store	StoreLayer.h	/^    CCLabelTTF* m_store;$/;"	m	class:StoreLayer	access:public
+StoreLayer::m_time	StoreLayer.h	/^	CCLabelTTF* m_time;$/;"	m	class:StoreLayer	access:public
+StoreLayer::onExit	StoreLayer.cpp	/^void StoreLayer::onExit()$/;"	f	class:StoreLayer	signature:()
+StoreLayer::onExit	StoreLayer.h	/^	virtual void onExit();$/;"	p	class:StoreLayer	access:public	signature:()
+StoreLayer::subStore	StoreLayer.cpp	/^void StoreLayer::subStore(int num)$/;"	f	class:StoreLayer	signature:(int num)
+StoreLayer::subStore	StoreLayer.h	/^	void subStore(int num);$/;"	p	class:StoreLayer	access:public	signature:(int num)
+StoreLayer::updateStore	StoreLayer.cpp	/^void StoreLayer::updateStore()$/;"	f	class:StoreLayer	signature:()
+StoreLayer::updateStore	StoreLayer.h	/^	virtual void updateStore();$/;"	p	class:StoreLayer	access:public	signature:()
+StoreLayer::updateTime	StoreLayer.cpp	/^void StoreLayer::updateTime()$/;"	f	class:StoreLayer	signature:()
+StoreLayer::updateTime	StoreLayer.h	/^	virtual void updateTime();$/;"	p	class:StoreLayer	access:public	signature:()
+WHITESTATUS	define.h	/^	WHITESTATUS,$/;"	e	enum:PieceStatus
+WhiteChessPiece	ChessPiece.h	/^class WhiteChessPiece : public ChessPiece$/;"	c	inherits:ChessPiece
+WhiteChessPiece::CREATE_FUNC	ChessPiece.h	/^	CREATE_FUNC(WhiteChessPiece);$/;"	p	class:WhiteChessPiece	access:public	signature:(WhiteChessPiece)
+WhiteChessPiece::init	ChessPiece.cpp	/^bool WhiteChessPiece::init()$/;"	f	class:WhiteChessPiece	signature:()
+WhiteChessPiece::init	ChessPiece.h	/^	virtual bool init();$/;"	p	class:WhiteChessPiece	access:public	signature:()
+WhiteStoreLayer	StoreLayer.h	/^class WhiteStoreLayer : public StoreLayer$/;"	c	inherits:StoreLayer
+WhiteStoreLayer::CREATE_FUNC	StoreLayer.h	/^	CREATE_FUNC(WhiteStoreLayer);	$/;"	p	class:WhiteStoreLayer	access:public	signature:(WhiteStoreLayer)
+WhiteStoreLayer::init	StoreLayer.cpp	/^bool WhiteStoreLayer::init()$/;"	f	class:WhiteStoreLayer	signature:()
+WhiteStoreLayer::init	StoreLayer.h	/^	virtual bool init();$/;"	p	class:WhiteStoreLayer	access:public	signature:()
+_APP_DELEGATE_H_	AppDelegate.h	2;"	d
+_CHESSBOARDLAYER_	ChessBoardLayer.h	2;"	d
+_CHESSPIECE_H_	ChessPiece.h	2;"	d
+_DEFINE_H_	define.h	2;"	d
+_GAMESCENE_H_	GameScene.h	2;"	d
+_SELECTWINDOW_H_	SelectWindow.h	2;"	d
+_STORELAYER_H_	StoreLayer.h	2;"	d
+__HELLOWORLD_SCENE_H__	HelloWorldScene.h	2;"	d
+__anon1::x	ChessBoardLayer.h	/^	int x;$/;"	m	struct:__anon1	access:public
+__anon1::y	ChessBoardLayer.h	/^	int y;$/;"	m	struct:__anon1	access:public
+addStore	StoreLayer.cpp	/^void StoreLayer::addStore(int num)$/;"	f	class:StoreLayer	signature:(int num)
+addStore	StoreLayer.h	/^	void addStore(int num);$/;"	p	class:StoreLayer	access:public	signature:(int num)
+animationInit	ChessPiece.cpp	/^void ChessPiece::animationInit()$/;"	f	class:ChessPiece	signature:()
+animationInit	ChessPiece.h	/^	void animationInit();$/;"	p	class:ChessPiece	access:public	signature:()
+applicationDidEnterBackground	AppDelegate.cpp	/^void AppDelegate::applicationDidEnterBackground() {$/;"	f	class:AppDelegate	signature:()
+applicationDidEnterBackground	AppDelegate.h	/^    virtual void applicationDidEnterBackground();$/;"	p	class:AppDelegate	access:public	signature:()
+applicationDidFinishLaunching	AppDelegate.cpp	/^bool AppDelegate::applicationDidFinishLaunching() {$/;"	f	class:AppDelegate	signature:()
+applicationDidFinishLaunching	AppDelegate.h	/^    virtual bool applicationDidFinishLaunching();$/;"	p	class:AppDelegate	access:public	signature:()
+applicationWillEnterForeground	AppDelegate.cpp	/^void AppDelegate::applicationWillEnterForeground() {$/;"	f	class:AppDelegate	signature:()
+applicationWillEnterForeground	AppDelegate.h	/^    virtual void applicationWillEnterForeground();$/;"	p	class:AppDelegate	access:public	signature:()
+ccTouchesBegan	ChessBoardLayer.cpp	/^void ChessBoardLayer::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)$/;"	f	class:ChessBoardLayer	signature:(CCSet* pTouches,CCEvent* pEvent)
+ccTouchesBegan	ChessBoardLayer.h	/^	virtual void ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent);$/;"	p	class:ChessBoardLayer	access:public	signature:(CCSet* pTouches,CCEvent* pEvent)
+changeCurrentRole	ChessBoardLayer.cpp	/^void ChessBoardLayer::changeCurrentRole()$/;"	f	class:ChessBoardLayer	signature:()
+changeCurrentRole	ChessBoardLayer.h	/^	void changeCurrentRole();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+changeRole	ChessPiece.cpp	/^void ChessPiece::changeRole(enum PieceStatus role)$/;"	f	class:ChessPiece	signature:(enum PieceStatus role)
+changeRole	ChessPiece.h	/^	void changeRole(enum PieceStatus role);$/;"	p	class:ChessPiece	access:public	signature:(enum PieceStatus role)
+changeStore	ChessBoardLayer.cpp	/^void ChessBoardLayer::changeStore(PieceStatus role,int num)$/;"	f	class:ChessBoardLayer	signature:(PieceStatus role,int num)
+changeStore	ChessBoardLayer.h	/^	void changeStore(PieceStatus role,int num);$/;"	p	class:ChessBoardLayer	access:public	signature:(PieceStatus role,int num)
+chessBuf	ChessBoardLayer.h	/^	int chessBuf[8][8];$/;"	m	class:ChessBoardLayer	access:private
+chessBufInit	ChessBoardLayer.cpp	/^void ChessBoardLayer::chessBufInit()$/;"	f	class:ChessBoardLayer	signature:()
+chessBufInit	ChessBoardLayer.h	/^	void chessBufInit();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+createPiece	ChessBoardLayer.cpp	/^void ChessBoardLayer::createPiece(int x,int y,enum PieceStatus role)$/;"	f	class:ChessBoardLayer	signature:(int x,int y,enum PieceStatus role)
+createPiece	ChessBoardLayer.h	/^	void createPiece(int x,int y,enum PieceStatus role);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y,enum PieceStatus role)
+dir	ChessBoardLayer.cpp	/^int ChessBoardLayer::dir[8][2] = {{1,0},{1,-1},{0,-1},{-1,-1},{-1,0},{-1,1},{0,1},{1,1}}; $/;"	m	class:ChessBoardLayer	file:
+dir	ChessBoardLayer.h	/^	static int dir[8][2];$/;"	m	class:ChessBoardLayer	access:private
+drawChessPiece	ChessBoardLayer.cpp	/^void ChessBoardLayer::drawChessPiece()$/;"	f	class:ChessBoardLayer	signature:()
+drawChessPiece	ChessBoardLayer.h	/^	void drawChessPiece();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+getPieceFromDic	ChessBoardLayer.cpp	/^ChessPiece* ChessBoardLayer::getPieceFromDic(int x,int y)$/;"	f	class:ChessBoardLayer	signature:(int x,int y)
+getPieceFromDic	ChessBoardLayer.h	/^	ChessPiece* getPieceFromDic(int x,int y);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y)
+getPieceRole	ChessPiece.cpp	/^PieceStatus ChessPiece::getPieceRole()$/;"	f	class:ChessPiece	signature:()
+getPieceRole	ChessPiece.h	/^	PieceStatus getPieceRole();$/;"	p	class:ChessPiece	access:public	signature:()
+init	ChessBoardLayer.cpp	/^bool ChessBoardLayer::init()$/;"	f	class:ChessBoardLayer	signature:()
+init	ChessBoardLayer.h	/^	virtual bool init();$/;"	p	class:ChessBoardLayer	access:public	signature:()
+init	ChessPiece.cpp	/^bool BlackChessPiece::init()$/;"	f	class:BlackChessPiece	signature:()
+init	ChessPiece.cpp	/^bool ChessPiece::init()$/;"	f	class:ChessPiece	signature:()
+init	ChessPiece.cpp	/^bool WhiteChessPiece::init()$/;"	f	class:WhiteChessPiece	signature:()
+init	ChessPiece.h	/^	virtual bool init();$/;"	p	class:BlackChessPiece	access:public	signature:()
+init	ChessPiece.h	/^	virtual bool init();$/;"	p	class:ChessPiece	access:public	signature:()
+init	ChessPiece.h	/^	virtual bool init();$/;"	p	class:WhiteChessPiece	access:public	signature:()
+init	GameScene.cpp	/^bool GameScene::init()$/;"	f	class:GameScene	signature:()
+init	GameScene.h	/^	virtual bool init();$/;"	p	class:GameScene	access:public	signature:()
+init	HelloWorldScene.cpp	/^bool HelloWorld::init()$/;"	f	class:HelloWorld	signature:()
+init	HelloWorldScene.h	/^    virtual bool init();  $/;"	p	class:HelloWorld	access:public	signature:()
+init	SelectWindow.cpp	/^bool SelectWindow::init()$/;"	f	class:SelectWindow	signature:()
+init	SelectWindow.h	/^	virtual bool init();$/;"	p	class:SelectWindow	access:public	signature:()
+init	StoreLayer.cpp	/^bool BlackStoreLayer::init()$/;"	f	class:BlackStoreLayer	signature:()
+init	StoreLayer.cpp	/^bool StoreLayer::init()$/;"	f	class:StoreLayer	signature:()
+init	StoreLayer.cpp	/^bool WhiteStoreLayer::init()$/;"	f	class:WhiteStoreLayer	signature:()
+init	StoreLayer.h	/^	virtual bool init();$/;"	p	class:BlackStoreLayer	access:public	signature:()
+init	StoreLayer.h	/^	virtual bool init();$/;"	p	class:StoreLayer	access:public	signature:()
+init	StoreLayer.h	/^	virtual bool init();$/;"	p	class:WhiteStoreLayer	access:public	signature:()
+judgeRule	ChessBoardLayer.cpp	/^int ChessBoardLayer::judgeRule(int x,int y,void *chess,enum PieceStatus currentRole)$/;"	f	class:ChessBoardLayer	signature:(int x,int y,void *chess,enum PieceStatus currentRole)
+judgeRule	ChessBoardLayer.h	/^	int judgeRule(int x,int y,void *chess,enum PieceStatus currentRole);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y,void *chess,enum PieceStatus currentRole)
+m_BlackToWhite	ChessPiece.h	/^	CCAnimate* m_BlackToWhite;$/;"	m	class:ChessPiece	access:protected
+m_WhiteToBlack	ChessPiece.h	/^	CCAnimate* m_WhiteToBlack;$/;"	m	class:ChessPiece	access:protected
+m_blackStatus	ChessBoardLayer.h	/^	BlackStoreLayer* m_blackStatus;$/;"	m	class:ChessBoardLayer	access:private
+m_chessPiece	ChessBoardLayer.h	/^	ChessPiece* m_chessPiece;$/;"	m	class:ChessBoardLayer	access:private
+m_chessPieceDic	ChessBoardLayer.h	/^	ChessPieceDic m_chessPieceDic;$/;"	m	class:ChessBoardLayer	access:private
+m_currentRole	ChessBoardLayer.h	/^	enum PieceStatus m_currentRole;	$/;"	m	class:ChessBoardLayer	typeref:enum:ChessBoardLayer::PieceStatus	access:private
+m_frameCache	ChessPiece.h	/^	CCSpriteFrameCache *m_frameCache;$/;"	m	class:ChessPiece	access:protected
+m_parentScene	GameScene.cpp	/^CCScene* GameScene::m_parentScene=NULL;$/;"	m	class:GameScene	file:
+m_parentScene	GameScene.h	/^    static	cocos2d::CCScene* m_parentScene;$/;"	m	class:GameScene	access:private
+m_pieceRole	ChessPiece.h	/^	PieceStatus m_pieceRole;	$/;"	m	class:ChessPiece	access:protected
+m_store	StoreLayer.h	/^    CCLabelTTF* m_store;$/;"	m	class:StoreLayer	access:public
+m_time	StoreLayer.h	/^	CCLabelTTF* m_time;$/;"	m	class:StoreLayer	access:public
+m_whiteStatus	ChessBoardLayer.h	/^	WhiteStoreLayer* m_whiteStatus;$/;"	m	class:ChessBoardLayer	access:private
+makeKey	ChessBoardLayer.cpp	/^std::string ChessBoardLayer::makeKey(int x, int y)$/;"	f	class:ChessBoardLayer	signature:(int x, int y)
+makeKey	ChessBoardLayer.h	/^	std::string makeKey(int x,int y);$/;"	p	class:ChessBoardLayer	access:public	signature:(int x,int y)
+menuBackCallback	GameScene.cpp	/^void GameScene::menuBackCallback(CCObject* pSender)$/;"	f	class:GameScene	signature:(CCObject* pSender)
+menuBackCallback	GameScene.h	/^	void menuBackCallback(CCObject* pSender);$/;"	p	class:GameScene	access:public	signature:(CCObject* pSender)
+menuCloseCallback	HelloWorldScene.cpp	/^void HelloWorld::menuCloseCallback(CCObject* pSender)$/;"	f	class:HelloWorld	signature:(CCObject* pSender)
+menuCloseCallback	HelloWorldScene.h	/^    void menuCloseCallback(CCObject* pSender);$/;"	p	class:HelloWorld	access:public	signature:(CCObject* pSender)
+menuContinueCallback	SelectWindow.cpp	/^void SelectWindow::menuContinueCallback()$/;"	f	class:SelectWindow	signature:()
+menuContinueCallback	SelectWindow.h	/^	void menuContinueCallback();$/;"	p	class:SelectWindow	access:public	signature:()
+menuExitCallback	SelectWindow.cpp	/^void SelectWindow::menuExitCallback()$/;"	f	class:SelectWindow	signature:()
+menuExitCallback	SelectWindow.h	/^	void menuExitCallback();$/;"	p	class:SelectWindow	access:public	signature:()
+menuMoreCallback	HelloWorldScene.cpp	/^void HelloWorld::menuMoreCallback(CCObject* pSender)$/;"	f	class:HelloWorld	signature:(CCObject* pSender)
+menuMoreCallback	HelloWorldScene.h	/^	void menuMoreCallback(CCObject* pSender);$/;"	p	class:HelloWorld	access:public	signature:(CCObject* pSender)
+menuSingalCallback	HelloWorldScene.cpp	/^void HelloWorld::menuSingalCallback(CCObject* pSender)$/;"	f	class:HelloWorld	signature:(CCObject* pSender)
+menuSingalCallback	HelloWorldScene.h	/^	void menuSingalCallback(CCObject* pSender);$/;"	p	class:HelloWorld	access:public	signature:(CCObject* pSender)
+onExit	StoreLayer.cpp	/^void StoreLayer::onExit()$/;"	f	class:StoreLayer	signature:()
+onExit	StoreLayer.h	/^	virtual void onExit();$/;"	p	class:StoreLayer	access:public	signature:()
+pixelToChessCoordinate	ChessBoardLayer.cpp	/^ChessCoordinate ChessBoardLayer::pixelToChessCoordinate(CCPoint point)$/;"	f	class:ChessBoardLayer	signature:(CCPoint point)
+pixelToChessCoordinate	ChessBoardLayer.h	/^	ChessCoordinate pixelToChessCoordinate(CCPoint point);$/;"	p	class:ChessBoardLayer	access:public	signature:(CCPoint point)
+scene	GameScene.cpp	/^cocos2d::CCScene* GameScene::scene()$/;"	f	class:GameScene	signature:()
+scene	GameScene.h	/^	static cocos2d::CCScene* scene();$/;"	p	class:GameScene	access:public	signature:()
+scene	HelloWorldScene.cpp	/^CCScene* HelloWorld::scene()$/;"	f	class:HelloWorld	signature:()
+scene	HelloWorldScene.h	/^    static cocos2d::CCScene* scene();$/;"	p	class:HelloWorld	access:public	signature:()
+scene	SelectWindow.cpp	/^cocos2d::CCScene* SelectWindow::scene(cocos2d::CCRenderTexture* bg)$/;"	f	class:SelectWindow	signature:(cocos2d::CCRenderTexture* bg)
+scene	SelectWindow.h	/^    static cocos2d::CCScene* scene(cocos2d::CCRenderTexture* bg);$/;"	p	class:SelectWindow	access:public	signature:(cocos2d::CCRenderTexture* bg)
+setCurrentRole	ChessBoardLayer.cpp	/^void ChessBoardLayer::setCurrentRole(PieceStatus role)	$/;"	f	class:ChessBoardLayer	signature:(PieceStatus role)
+setCurrentRole	ChessBoardLayer.h	/^	void setCurrentRole(PieceStatus role);	$/;"	p	class:ChessBoardLayer	access:public	signature:(PieceStatus role)
+subStore	StoreLayer.cpp	/^void StoreLayer::subStore(int num)$/;"	f	class:StoreLayer	signature:(int num)
+subStore	StoreLayer.h	/^	void subStore(int num);$/;"	p	class:StoreLayer	access:public	signature:(int num)
+update	ChessBoardLayer.cpp	/^void ChessBoardLayer::update(float dt)$/;"	f	class:ChessBoardLayer	signature:(float dt)
+update	ChessBoardLayer.h	/^	virtual void update(float dt);$/;"	p	class:ChessBoardLayer	access:public	signature:(float dt)
+updateStore	StoreLayer.cpp	/^void StoreLayer::updateStore()$/;"	f	class:StoreLayer	signature:()
+updateStore	StoreLayer.h	/^	virtual void updateStore();$/;"	p	class:StoreLayer	access:public	signature:()
+updateTime	StoreLayer.cpp	/^void StoreLayer::updateTime()$/;"	f	class:StoreLayer	signature:()
+updateTime	StoreLayer.h	/^	virtual void updateTime();$/;"	p	class:StoreLayer	access:public	signature:()
+x	ChessBoardLayer.h	/^	int x;$/;"	m	struct:__anon1	access:public
+y	ChessBoardLayer.h	/^	int y;$/;"	m	struct:__anon1	access:public
+~AppDelegate	AppDelegate.cpp	/^AppDelegate::~AppDelegate() $/;"	f	class:AppDelegate	signature:()
+~AppDelegate	AppDelegate.h	/^    virtual ~AppDelegate();$/;"	p	class:AppDelegate	access:public	signature:()

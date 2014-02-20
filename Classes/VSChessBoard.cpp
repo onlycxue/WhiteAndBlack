@@ -20,7 +20,7 @@
 
 bool VSChessBoard::init()
 {
-	if(!ChessBoardLayer::init());
+	if(!ChessBoardLayer::init())
 	{
 		return false;
 	}
@@ -34,7 +34,7 @@ bool VSChessBoard::init()
 void VSChessBoard::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
 {
 	
-
+	ChessBoardLayer::ccTouchesBegan(pTouches,pEvent);
 }
 
 

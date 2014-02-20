@@ -131,7 +131,7 @@ void AIChessBoard::ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent)
 			int num2 = AIjudge(getCurrentRole());	
 			if(num2 > 0)
 			{
-				changeStore(getCurrentRole(),num);
+				changeStore(getCurrentRole(),num2);
 				changeCurrentRole();
 				drawChessPiece();	
 			}

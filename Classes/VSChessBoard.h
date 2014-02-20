@@ -9,6 +9,7 @@ class VSChessBoard: public ChessBoardLayer
 		virtual bool init();	
 		virtual void ccTouchesBegan(CCSet* pTouches,CCEvent* pEvent);
 		
+		CREATE_FUNC(VSChessBoard);
 	protected:
 
 	private:

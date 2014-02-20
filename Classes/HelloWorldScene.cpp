@@ -103,17 +103,11 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 
 void HelloWorld::menuSingalCallback(CCObject* pSender)
 {
-	
-	CCDirector::sharedDirector()->replaceScene(GameScene::scene());
-
-
+	CCDirector::sharedDirector()->replaceScene(GameScene::scene(GameScene::SingalMode));
 }
 
 void HelloWorld::menuMoreCallback(CCObject* pSender)
 {
-
-
-
-
+	CCDirector::sharedDirector()->replaceScene(GameScene::scene(GameScene::MoreMode));
 }
 

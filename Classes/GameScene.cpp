@@ -21,7 +21,7 @@ USING_NS_CC;
 using namespace CocosDenshion;
 
 CCScene* GameScene::m_parentScene=NULL;
-cocos2d::CCScene* GameScene::scene()
+cocos2d::CCScene* GameScene::scene(GameMode mode)
 {
 	CCScene *scene = CCScene::create();
 	
@@ -29,9 +29,21 @@ cocos2d::CCScene* GameScene::scene()
 	scene->addChild(layer,1);
 //	m_parentScene=scene;
 	//scene->addChild(GameScene::create());
-	 
-	ChessBoardLayer* chessLayer = ChessBoardLayer::create();
-	scene->addChild(chessLayer,0);
+	if(mode == SingalMode) 
+	{
+		AIChessBoard* chessLayer = AIChessBoard::create();
+		scene->addChild(chessLayer,0);
+	
+	}
+	else if(mode == MoreMode)
+	{
+		VSChessBoard* chessLayer = VSChessBoard::create();
+		scene->addChild(chessLayer,0);
+	
+	}
+
+//	ChessBoardLayer* chessLayer = ChessBoardLayer::create();
+//	scene->addChild(chessLayer,0);
 
 //	WhiteStoreLayer* whiteStatus = WhiteStoreLayer::create(); 
 //	scene->addChild(whiteStatus);

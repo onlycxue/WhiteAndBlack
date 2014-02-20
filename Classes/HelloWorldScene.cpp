@@ -58,9 +58,33 @@ bool HelloWorld::init()
 
 	pMoreGameItem->setPosition(ccp(origin.x+visibleSize.width/2,origin.y+visibleSize.height/2-200));														  
 			// create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, pSingalGameItem,pMoreGameItem,NULL);
-    pMenu->setPosition(CCPointZero);
-    this->addChild(pMenu, 1);
+    CCMenu* pMenu = CCMenu::create(pSingalGameItem,pMoreGameItem,NULL);
+//    pMenu->setPosition(CCPointZero);
+//    this->addChild(pMenu, 1);
+	pMenu->alignItemsVertically();
+
+	//elastic effect
+	CCSize s = CCDirector::sharedDirector()->getWinSize();
+	
+	int i = 0;
+	CCNode* child;
+	CCArray* pArray = pMenu->getChildren();
+	CCObject* pObject = NULL;
+	CCARRAY_FOREACH(pArray,pObject)
+	{
+		if(pObject == NULL)	
+			break;
+		child = (CCNode*)pObject;
+		CCPoint dstPoint = child->getPosition();
+		int offset = (int)(s.width/2+50);
+		if(i % 2 == 0)
+			offset = -offset;
+		child->setPosition(ccp(dstPoint.x+offset,dstPoint.y));
+		child->runAction(CCEaseElasticOut::create(CCMoveBy::create(2,ccp(dstPoint.x-offset,0)),0.35f));
+	
+	}
+	addChild(pMenu,1);
+	pMenu->setPosition(ccp(s.width/2,s.height/2));
 
     /////////////////////////////
     // 3. add your codes below...
